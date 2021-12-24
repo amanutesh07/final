@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+<script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=edd33cae-b1c6-4d9a-b377-00f7e61dcfb8" type="text/javascript"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+	<style>
+		@media screen and (max-width: 600px){
+			.header{
+				display:none !important;
+				padding: 15px 0 !important;
+				font-size: 25px !important;
+				text-align: center !important;
+				margin-top: 0 !important;
+			}
+			.header>div{
+				padding: 15px 0;
+			}
+			#toggle:checked + .header{
+				display: block !important;
+			}
+			.form-inline{
+				display:none;
+			}
+			.main{
+				background-position-y: -130px !important;
+				height: 400px !important;
+				background-position-x: -130px !important;
+			}
+			.main>p{
+				padding-top: 150px !important;
+				font-size: 60px !important;
+			}
+			label{
+				display: block !important;
+			}
+			.navbar{
+				display: block !important; 
+				font-size: 20px !important;
+			}
+			.navv{
+				display: block !important;
+				width: 200px !important;
+
+			}
+			#logo{
+				padding-left: 0px !important;
+				margin: 0 67px !important;
+			}
+			.sns{
+				margin: 0px 56px!important;
+			}
+			#navi{
+				padding-left: 70px !important;
+				font-size: 23px !important;
+			}
+			.m1{
+				display: block !important;
+				padding: 100px 30px !important;
+			}
+			#img{
+				height: 300px !important;
+				width: 100% !important;
+			}
+			#inone{
+				padding-bottom: 30px !important;
+			}
+			#p1{
+				padding-bottom: 30px !important;
+			}
+			.d1{
+				width: 90% !important;
+				height: 560px !important;
+			}
+			.s1{
+				padding: 250px 50px  !important;
+			}
+			#img2{
+			margin-top: -755px !important;
+			margin-left: 20px !important;
+			width: 80%!important;
+			height: 230px !important;
+			}
+			.b1{
+				width: 90% !important;
+				height: 560px !important;
+				display: block !important;
+			}
+			.k1{
+				padding-top: 100px !important;
+				padding-right: 0px !important;
+				padding-left: -30px !important;
+			}
+			#img1{
+				width: 80% !important;
+				height: 240px !important;
+				position: absolute !important;
+				margin-top: -560px !important;
+				margin-left: -57px !important;
+				
+			}
+			.l1{
+				width: 90% !important;
+				height: 560px !important;
+			}
+			.n1{
+				padding: 250px 50px  !important;
+			}
+			#img3{
+			margin-top: -775px !important;
+			margin-left: 20px !important;
+			width: 80%!important;
+			height: 230px !important;
+			}
+			.w1{
+				width: 90% !important;
+				height: 560px !important;
+				display: block !important;
+			}
+			.r1{
+				padding-top: 140px !important;
+				padding-right: 0px !important;
+				padding-left: -30px !important;
+			}
+			#img4{
+				width: 80% !important;
+				height: 240px !important;
+				position: absolute !important;
+				margin-top: -530px !important;
+				margin-left: -57px !important;
+			}
+			.header1{
+				flex-wrap: wrap !important;
+			}
+			.navbar{
+				display: block !important; 
+				font-size: 20px !important;
+			}
+			.navv{
+				display: none !important;
+				
+			}
+			#logo{
+				padding-left: 0px !important;
+				margin: 0 67px !important;
+			}
+			.sns{
+				margin: 0px 56px!important;
+			}
+			#navi{
+				padding-left: 70px !important;
+				font-size: 23px !important;
+			}
+			#ins{
+				width: 40px !important;
+				height: 40px !important; 
+			}
+			#twt{
+				margin-left: 10px;
+				width: 40px !important;
+				height: 40px !important; 
+			}
+			#fcb{
+				margin-left: 10px;
+				width: 45px !important;
+				height: 45px !important; 
+			}
+			#ytb{
+				margin-left: 10px;
+				width: 40px !important;
+				height: 40px !important; 
+			}
+
+		}
+		@media screen and (max-width: 400px){
+			#logo{
+				padding-left: 0px !important;
+				margin: 0 45px !important;
+			}
+			.sns{
+				margin: 0px 26px!important;
+			}
+			#img{
+				height: 250px !important;
+				width: 100% !important;
+			}
+			.d1{
+				width: 90% !important;
+				height: 580px !important;
+			}
+			.s1{
+				padding: 250px 50px  !important;
+				padding-bottom:50px  !important;
+			}
+			#img2{
+			margin-top: -635px !important;
+			margin-left: 20px !important;
+			width: 80%!important;
+			height: 230px !important;
+			}
+			.b1{
+				width: 90% !important;
+				height: 560px !important;
+				display: block !important;
+			}
+			.k1{
+				padding-top: 100px !important;
+				padding-right: 0px !important;
+				padding-left: -30px !important;
+			}
+			#img1{
+				width: 80% !important;
+				height: 240px !important;
+				position: absolute !important;
+				margin-top: -590px !important;
+				margin-left: -57px !important;
+				
+			}
+			.l1{
+				width: 90% !important;
+				height: 560px !important;
+			}
+			.n1{
+				padding: 250px 50px  !important;
+			}
+			#img3{
+			margin-top: -775px !important;
+			margin-left: 20px !important;
+			width: 80%!important;
+			height: 230px !important;
+			}
+			.header1>div{
+			padding: 25px 100px !important;
+			}
+		}
+		body{
+			margin: 0;
+			
+		}
+		button{
+			font-family: 'Cuprum', sans-serif;
+		}
+		.header{
+			display: flex;
+			justify-content: space-around;
+			text-transform: uppercase;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 70px;
+			font-size: 15px;
+			color: #820024;
+			cursor:pointer;
+			margin-top: -57px;
+			background-color: white;
+		}
+		.header1{
+			display: flex;
+			justify-content: space-around;
+			text-transform: uppercase;
+			font-size: 13px;
+			color: #820024;
+			cursor:pointer;
+			background-color: white;
+		}
+		.header1>div{
+			padding: 25px 130px;
+		}
+		#btn1{
+			background-color: transparent;
+			border:1px solid #820024;
+		}
+		#logo{
+			font-size: 30px;
+
+		}
+		#logo1{
+			font-size: 30px;
+			color: #820024;
+			cursor:pointer;
+			text-transform: uppercase;
+			padding: 15px 20px;
+		}
+		.nv{
+			float: right;
+		}
+		label{
+			margin: -62px 30px 0 0;
+			font-size: 40px;
+			color: #820024;
+			cursor: pointer;
+			display: none;
+		}
+		#toggle{
+			display: none;
+		}
+		.main{
+			background-image:url(aboutus.JPG); 
+			text-transform: uppercase;
+			background-repeat: no-repeat;
+			height: 450px;
+			text-align: center;
+			background-size: cover;
+			background-position-y: -190px;
+			background-attachment: fixed;
+		}
+		.main>p{
+			margin:0;
+			padding-top: 170px;
+			color: white;
+			font-size: 90px;
+			font-family: 'Luckiest Guy', cursive;
+		}
+		.m1{
+			display: flex;
+			padding: 100px;
+			background-color: #FFEFD5;
+		}
+		.d1{
+			margin-top: 180px;
+			margin-bottom: 100px;
+			background-color: #f8c1b8; 
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			
+		}
+		.s1{
+			padding-left: 700px;
+			padding-top: 80px;
+			padding-right: 80px;
+			color: #820024;
+		}
+		#img2{
+			position: absolute;
+			margin-top: -350px;
+			margin-left: 80px;
+			width: 550px;
+			height: 370px;
+		}
+		.b1{
+			margin-top: 180px;
+			margin-bottom: 100px; 
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 80px;
+		}
+		#img1{
+			margin-top:-160px;
+			width: 550px;
+			height: 370px;
+		}
+		.l1{
+			margin-top: 180px;
+			margin-bottom: 100px;
+			background-color: #b6b8dc;
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			
+		}
+		.n1{
+			padding-left: 700px;
+			padding-top: 80px;
+			padding-right: 80px;
+			color: white;
+		}
+		#img3{
+			position: absolute;
+			margin-top: -330px;
+			margin-left: 80px;
+			width: 550px;
+			height: 370px;
+		}
+		.w1{
+			margin-top: 180px;
+			margin-bottom: 100px; 
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 80px;
+		}
+		#img4{
+			margin-top:-160px;
+			width: 550px;
+			height: 370px;
+		}
+		#logo{
+			font-size: 30px;
+
+		}
+		#btn4{
+			background-color: transparent;
+			border:1px solid white;
+		}
+		</style>
+</head>
+<body>
+<div id="logo1" onclick="home()" style="font-family: 'Bad Script', cursive; background-color: white;">bread</div>
+<div class="nv">
+		<label for="toggle">&#9776;</label>
+		</div>
+		<input type="checkbox" name="" id="toggle">
+<div class="header">
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="products.html" style="color: #820024; text-decoration: none;">products</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="aboutus.html" style="color: #820024; text-decoration: none;">about us</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="location.html" style="color: #820024; text-decoration: none;">location</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="contuctus.html"style="color: #820024; text-decoration: none;">Contuct us</a></div>
+	
+    <form class="form-inline">
+    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Small">
+    <button id="btn1" class="btn btn-sm " type="submit">Search</button>
+  </form>
+	</div>
+<div class="main">
+	<p>About us</p>
+</div>
+<div class="header1">
+	    <div onclick="window.location.reload()" onmouseover="big1(this)" onmouseout="sml1(this)">About</div>
+		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">Our people</div>
+		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">our responsibility</div>
+		<div onclick="change(this)" onmouseover="big1(this)" onmouseout="sml1(this)">our community</div>
+</div>
+<div class="m1">
+	<div style="padding-right: 150px;">
+		<h2 id="h22" style="padding-bottom: 30px;color: #E03C31;">Celebrate Fresh</h2>
+		<p id="p1" style="font-size: 17px; color: #820024;">Fresh, handcrafted bread and treats. Quality, carefully sourced ingredients. Friends and family. Passion and curiosity. We are up at the crack of dawn so our bakeries smell like Moms kitchen. After each day of sharing our love for all things fluffy and flaky, we pay it forward by donating leftover baked goods to local charities.
+		</p>
+		<img id="inone" src="https://www.cobsbread.com/drive/uploads/2020/11/Website-Bugs_About-COBS-1.png">
+	</div>
+	<img id="img" src="https://www.cobsbread.com/drive/uploads/2019/12/Brand_700x485-Treats.jpg">
+</div>
+
+<div id="d1" class = "d1">
+	<div class="s1">
+	<div id="s2">	
+   	<h1 id="h11" style="font-family: 'Luckiest Guy', cursive;"> Our Beginnings</h1>
+   	<p id="p2">COBS Bread is part of Bakers Delight, an Australian bakery franchise established in 1980 by Roger and Lesley Gillespie. Since expanding from a multi-generational family business, we’ve grown to over 700 bakeries in communities around the world, including 125 bakeries across Canada.</p>
+   	
+   </div>
+   </div>
+   <img id="img2" src="https://www.cobsbread.com/drive/uploads/2019/12/Roger-and-Lesley-700x485-1.png">
+   	</div>
+<div id="b1" class="b1" style="background-color: #aa8066; display: flex;">
+<div class="k1" style="color: #ffffff; padding-right: 70px;">
+<h1 id="h111" style="font-family: 'Luckiest Guy', cursive;">Our Traditions</h1>
+<p id="p22">We believe in high performance and personal accountability. We take pride in our work and have passion for everything we do. Open and honest communication is the cornerstone of everything COBS Bread. And we aren’t afraid to innovate in the traditional baking industry.</p>
+</div>
+<img id="img1" src="https://www.cobsbread.com/drive/uploads/2019/12/COBS_FRANCHISE_2019-0115-700x485.jpg" class="js-loaded alt-chalkboard__img is-loaded">
+</div>
+<div id="l1" class = "l1">
+	<div class="n1">
+	<div id="n2">	
+   	<h1 style="font-family: 'Luckiest Guy', cursive;">Our Vision And Mission</h1>
+   	<p>Our Vision is to be the favourite bakery in every community, and it is our mission to develop strong connections with our customers and communities that ignite a passion for bread and the freshest baked treats.</p>
+   	
+   </div>
+   </div>
+   <img id="img3" src="https://www.cobsbread.com/drive/uploads/2019/12/COBS_FRANCHISE_2019-0550.jpg">
+   </div>
+   <div id="w1" class="w1" style="background-color: #f8c1b8; display: flex;">
+<div class="r1" style="color: #820024; padding-right: 70px;">
+<h1 style="font-family: 'Luckiest Guy', cursive;">The Bread Difference</h1>
+<p>We bake fresh in-house all day, every day, and when we close our doors, we donate our leftover baked goods to local charities. The next morning, we start fresh. Let’s toast to being different.</p>
+</div>
+<img id="img4" src="https://www.cobsbread.com/drive/uploads/2019/10/End-of-Day-giving-700x458.png">
+</div>
+<div class="navbar" style="display: flex; color: #820024; margin-top: 80px;">
+	<div class="navv" style="padding-left: 65px;padding-bottom: 30px; width: 400px; ">
+		<h1 id="navi" style="padding-bottom: 40px;">WE BAKE EMAILS TOO. SIGN UP TO RECEIVE THE LATEST NEWS.</h1>
+	<form class="form-inline">
+    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Email..." aria-label="Small" style="padding: 20px 35px;">
+    <button id="btn4" class="btn" type="submit" style="font-size: 25px;">></button>
+  </form>
+	</div>
+
+<div >
+	<div id="logo" style="font-family: 'Bad Script', cursive; text-transform: uppercase;padding-left: 670px;padding-top: 35px;padding-bottom: 30px;">bread</div>
+	<div class="sns" style="display:flex;justify-content: space-around; width: 200px; margin-left: 625px; cursor:pointer;">
+		<a href="https://www.instagram.com/"><img id="ins" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdLbbD4mpNCaJrgwTZMVrOW-6MjC5B6og4kA&usqp=CAU" width="30px" height="30px"></a>
+
+		<a href="https://twitter.com/?lang=en"><img id="twt" src="https://webstockreview.net/images/red-twitter-png-1.png" width="35px" height="35px" style="padding-top: -8px;"></a>
+
+		<a href="https://www.facebook.com/campaign/landing.php?campaign_id=1635645038&extra_1=s%7Cc%7C313664123240%7Ce%7Cfacebook%20%27%7C&placement=&creative=313664123240&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D1635645038%26adgroupid%3D61926920145%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-360705453827%26loc_physical_ms%3D1009806%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4niCgDFwU7uUC9UOFrHxwxTXNwfg06h_JSxARERNE-GzbQOZ5sY8oBYaAiGbEALw_wcB"><img id="fcb" src="https://www.shareicon.net/data/512x512/2016/11/24/856518_media_512x512.png" width="35px" height="35px"></a>
+
+		<a href="https://www.youtube.com/"><img id="ytb" src="https://icons-for-free.com/iconfiles/png/512/rs+social+youtube+icon-1320190674653481120.png" width="35px" height="35px" style="padding-top: -8px;"></a>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+function big1(element){
+	element.style.borderBottom = "3px solid #820024";
+}
+function sml1(element){
+	element.style.borderBottom = "3px solid white";
+}
+		function change(element){
+			var a = element.innerHTML;
+			switch(a){
+				case"Our people":
+				document.getElementById("img").src = "https://www.cobsbread.com/drive/uploads/2019/12/COBS_FRANCHISE_2019-0593-700x485-1.jpg";
+				document.getElementById("p1").innerHTML = "We are passionate about creating an inclusive environment that promotes diversity within our network. Regardless of gender, age, ethnicity, disabilities or race, we embrace each person’s individuality, because we recognize that is what builds our unique culture.";
+				document.getElementById("h22").innerHTML = "People Come First";
+				document.getElementById("inone").style.display = "none";
+
+				document.getElementById("img2").src = "https://www.cobsbread.com/drive/uploads/2019/10/COBS_FRANCHISE_2019-0905-700x485.jpg";
+				document.getElementById("p2").innerHTML = "Our network is built on the passion from our franchisees. We welcome franchisees from all walks of life to add to the rich fabric of our bakery family. We are proud winners of the Canadian Franchise Association’s Franchisee’s Choice Award for 10 years running!";
+				document.getElementById("h11").innerHTML = "Our Passionate Franchisees";
+				document.getElementById("p2").style.color="white";
+				document.getElementById("h11").style.color="white";
+				document.getElementById("d1").style.backgroundColor="#aa8066";
+
+				document.getElementById("img1").src = "https://www.cobsbread.com/drive/uploads/2019/10/COBS_FRANCHISE_2019-0211-700x485.jpg";
+				document.getElementById("p22").innerHTML = "Sales staff, bakers, managers, franchisees, corporate staff – we’re all part of the COBS Bread Family.For the second year in a row, COBS Bread is proud to be recognized as a Great Place to Work.  We are particularly proud of this honour as we were recognized by those who matter the most: our staff.";
+				document.getElementById("h111").innerHTML = "Proud Employers";
+				document.getElementById("p22").style.color="#820024";
+				document.getElementById("h111").style.color="#820024";
+				document.getElementById("b1").style.backgroundColor="#f8c1b8";
+
+				document.getElementById("l1").style.display = "none";
+				document.getElementById("w1").style.display = "none";
+				break;
+				case("our responsibility"):
+				document.getElementById("img").src = "https://www.cobsbread.com/drive/uploads/2020/10/Breaducation_700x485-Lesson1-700x485-1.jpg";
+				document.getElementById("p1").innerHTML = "Real change starts from within. Part of being accountable to our customers and our employees is by continuously working to find better solutions, creating opportunities to improve, and constantly challenging what has been done. Real change takes time and commitment to make a difference.Read on to find out what we are doing to make change happen.";
+				document.getElementById("h22").innerHTML = "Environmental Impact";
+				document.getElementById("inone").style.display = "none";
+
+				document.getElementById("img2").src = "https://www.cobsbread.com/drive/uploads/2019/10/COBS_FRANCHISE_2019-0892-700x485.jpg";
+				document.getElementById("p2").innerHTML = "One of the keys to our quality products is the ingredients we use. We work with many suppliers from across the globe, and as part of our decision criteria as to whom we should partner with, we review their environmental and people management practices. We request that they recognize our goal to reduce our carbon footprint and help us achieve our goals.";
+				document.getElementById("h11").innerHTML = "Ethical Sourcing";
+				document.getElementById("p2").style.color="#820024";
+				document.getElementById("h11").style.color="#820024";
+				document.getElementById("d1").style.backgroundColor="#f8c1b8";
+
+				document.getElementById("img1").src = "https://www.cobsbread.com/drive/uploads/2019/12/Product_Hero_Ingredients_700x485.jpg";
+				document.getElementById("p22").innerHTML = "We’re not shy when we talk about the quality of our ingredients and how we endeavor to continuously improve. It’s no secret that our most used ingredient is flour, and we don’t settle for less than the best. Our flour is grown on farms in Southern Alberta, and milled by P&H Milling in Lethbridge.";
+				document.getElementById("h111").innerHTML = "Sourced Ingredients";
+				document.getElementById("p22").style.color="#820024";
+				document.getElementById("h111").style.color="#820024";
+				document.getElementById("b1").style.backgroundColor="#debed2";
+
+				document.getElementById("l1").style.display = "none";
+				document.getElementById("w1").style.display = "none";
+				break;
+				case("our community"):
+				document.getElementById("img").src = "https://www.cobsbread.com/drive/uploads/2020/10/Breakfast-Club-of-Canada-700x485-1.jpg";
+				document.getElementById("p1").innerHTML = "Our vision is to be the favourite bakery in every community. It’s part of the fibre of our company and our day-to-day to build connections with local organizations in the neighbourhoods we do business in.";
+				document.getElementById("h22").innerHTML = "Part of the Community";
+				document.getElementById("inone").style.display = "none";
+
+				
+				document.getElementById("p2").innerHTML = "We bake all of our products fresh every day and then we give fresh every night, so every bread finds a home. At the end of every day, our bakeries donate the unsold goods to local charitable programs.Dedicated volunteers visit our bakeries to pick up the unsold bread and baked goods which they distribute to local charities.";
+				document.getElementById("h11").innerHTML = "End of Day Giving";
+				document.getElementById("p2").style.color="#820024";
+				document.getElementById("h11").style.color="#820024";
+				document.getElementById("d1").style.backgroundColor="#f8c1b8";
+
+				document.getElementById("img1").src = "https://www.cobsbread.com/drive/uploads/2019/08/Driftwood-Community-Day-1.2-2.jpg";
+				document.getElementById("p22").innerHTML = "Contributing to our community is a part of the day-to-day at COBS Bread. In addition to our local End of Day Giving charitable partners, many bakeries host fundraisers to celebrate their anniversaries or to support other causes they are passionate about.";
+				document.getElementById("h111").innerHTML = "Community Partnerships";
+				document.getElementById("p22").style.color="#820024";
+				document.getElementById("h111").style.color="#820024";
+				document.getElementById("b1").style.backgroundColor="#dddae8";
+
+				document.getElementById("l1").style.display = "none";
+				document.getElementById("w1").style.display = "none";
+			}
+		}
+function big(element){
+	element.style.borderBottom = "1px solid #820024";
+}
+function sml(element){
+	element.style.borderBottom = "1px solid white";
+}
+function home(){
+    location.href = "project.html";
+}
+	</script>
+	</body>
+</html>
