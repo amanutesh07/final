@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+	<style>
+		body{
+			margin: 0;
+
+		}
+		button{
+			font-family: 'Cuprum', sans-serif;
+		}
+		.header{
+			display: flex;
+			justify-content: space-around;
+			text-transform: uppercase;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 70px;
+			font-size: 15px;
+			color: #820024;
+			cursor:pointer;
+			margin-top: -57px;
+		}
+		#logo{
+			font-size: 30px;
+
+		}
+		#logo1{
+			font-size: 30px;
+			color: #820024;
+			cursor:pointer;
+			text-transform: uppercase;
+			padding: 15px 20px;
+		}
+		#btn1{
+			background-color: transparent;
+			border:1px solid #820024;
+		}
+		.container{
+			margin-left: 225px;
+			width: 800px;
+			height: 1000px;
+			background-color: #FDF5E6;
+		}
+		.main{
+			display: flex;
+			
+		}
+		.m1{
+			background-image:url(Iw7NGp7Ujeo.jpg); 
+			text-transform: uppercase;
+			width: 1000px;
+			background-repeat: no-repeat;
+			padding-top: 400px;
+			padding-left: 70px;
+			background-size: cover;
+		}
+		.m1>p{
+			margin:0;
+			color: white;
+			font-size: 90px;
+			background-position-x: -250px;
+		}
+		#slideshow { 
+    		position: relative; 
+			padding-top: 50px;
+			font-family: 'Luckiest Guy', cursive;
+		}
+		.m2{
+			background-color: #FFEFD5;
+			width: 450px;
+			height: 780px;
+			text-align: center;
+		}
+		#btn3{
+			margin-top: 520px;
+		}
+
+		#slideshow > div { 
+    		position: absolute; 
+		}
+		#slideshow>img{
+			width:450px;
+			height:350px;
+		}
+		h2{
+			padding-bottom: 50px;
+			text-transform: uppercase;
+		}
+		.d1{
+			margin-top: 180px;
+			margin-bottom: 100px;
+			background-color: #FFEFD5;
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			display: none;
+			
+		}
+		.s1{
+			padding-left: 700px;
+			padding-top: 80px;
+			padding-right: 80px;
+			color: #820024;
+		}
+		#img2{
+			position: absolute;
+			margin-top: -300px;
+			margin-left: 80px;
+			width: 550px;
+			height: 370px;
+		
+		}
+		
+		.b1{
+			margin-top: 180px;
+			margin-bottom: 100px;
+			background-color: #A0522D;
+			width: 1200px;
+			height: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			
+		}
+		.g1{
+			padding-left: 700px;
+			padding-top: 80px;
+			padding-right: 80px;
+			
+		}
+		#img4{
+			position: absolute;
+			margin-top: -350px;
+			margin-left: 80px;
+			width: 550px;
+			height: 370px;
+		}
+		.nv{
+			float: right;
+		}
+		label{
+			margin: -62px 30px 0 0;
+			font-size: 40px;
+			color: #820024;
+			cursor: pointer;
+			display: none;
+		}
+		#toggle{
+			display: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		#btn4{
+			background-color: transparent;
+			border:1px solid white;
+		}
+		@media only screen and (max-width: 600px){
+			.header{
+				display:none !important;
+				padding: 15px 0 !important;
+				font-size: 25px !important;
+				text-align: center !important;
+				margin-top: 0 !important;
+			}
+			.header>div{
+				padding: 15px 0;
+			}
+			#toggle:checked + .header{
+				display: block !important;
+			}
+			#form-inline{
+				display:none;
+			}
+			.main{
+				flex-wrap: wrap;
+			}
+			.m1{	
+				height: 600px;
+				width: 100% !important;
+				padding-top: 200px !important;
+			}
+			.m1>p{
+				font-size: 64px !important;
+			}
+			.m2{
+				height: 600px !important;
+				width: 100% !important;
+				text-align: center !important;
+			}
+			#btn3{
+				margin-top: 410px !important;
+			}
+			.img-main{
+			width:350px !important;
+			height:250px !important;
+			}
+			#slideshow{
+				margin-left: 30px !important;
+			}
+			.d1{
+				width: 85% !important;
+				height: 560px !important;
+			}
+			.s1{
+				padding: 250px 50px  !important;
+			}
+			#img2{
+			margin-top: -735px !important;
+			margin-left: 35px !important;
+			width: 70%!important;
+			height: 240px !important;
+			}
+			#btns1{
+				margin-left: 0 !important;
+				margin-top: 35px !important;
+			}
+			.b1{
+				width: 85% !important;
+				height: 560px !important;
+			}
+			.g1{
+				padding: 170px 50px!important;
+				
+			}
+			#img4{
+			margin-top: -735px !important;
+			margin-left: 35px !important;
+			width: 70%!important;
+			height: 240px !important;
+			}
+			.navbar{
+				display: block !important; 
+				font-size: 20px !important;
+			}
+			.navv{
+				display: none !important;
+				
+
+			}
+			#logo{
+				padding-left: 0px !important;
+				margin: 0 67px !important;
+			}
+			.sns{
+				margin: 0px 56px!important;
+			}
+			#navi{
+				padding-left: 70px !important;
+				font-size: 23px !important;
+			}
+			label{
+				display: block !important;
+			}
+			#ins{
+				width: 40px !important;
+				height: 40px !important; 
+			}
+			#twt{
+				margin-left: 10px;
+				width: 40px !important;
+				height: 40px !important; 
+			}
+			#fcb{
+				margin-left: 10px;
+				width: 45px !important;
+				height: 45px !important; 
+			}
+			#ytb{
+				margin-left: 10px;
+				width: 40px !important;
+				height: 40px !important; 
+			}
+		}
+		@media screen and (max-width: 400px){
+			.m1>p{
+				padding-left: 0 !important;
+			}
+			.d1{
+				width: 85% !important;
+				height: 520px !important;
+			}
+			.s1{
+				padding: 200px 50px  !important;
+			}
+			#img2{
+			margin-top: -635px !important;
+			margin-left: 35px !important;
+			width: 70%!important;
+			height: 240px !important;
+			}
+			#slideshow{
+				margin-left: 10px !important;
+			}
+			#logo{
+				padding-left: 0px !important;
+				margin: 0 45px !important;
+			}
+			.sns{
+				margin: 0px 26px!important;
+			}
+			
+		}
+	</style>
+</head>
+<body>
+<div id="logo1" onclick="window.location.reload()" style="font-family: 'Bad Script', cursive;">bread</div>
+<div class="nv">
+		<label for="toggle">&#9776;</label>
+		</div>
+		<input type="checkbox" name="" id="toggle">
+<div class="header">
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="products.html" style="color: #820024; text-decoration: none;">products</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="aboutus.html" style="color: #820024; text-decoration: none;">about us</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="location.html" style="color: #820024; text-decoration: none;">location</a></div>
+		<div onmouseover="big(this)" onmouseout="sml(this)"><a href="contuctus.html"style="color: #820024; text-decoration: none;">Contuct us</a></div>
+	
+    <form id="form-inline" class="form-inline">
+    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Small">
+    <button id="btn1" class="btn btn-sm " type="submit">Search</button>
+  </form>
+	</div>
+<div class="main">
+  <div class="m1"> 
+  	<p style="font-family: 'Luckiest Guy', cursive;">Celebrate</p>
+  	<p style="font-family: 'Luckiest Guy', cursive;">Fresh</p>
+  </div>
+<div class="m2">
+<div id="slideshow">
+   <div>
+   	<h2 style="text-align: center; color: #820024;">healthy</h2>
+     <img class="img-main" src="cobs-product-cape-seed-loaf-583x400.png" style="width: 450px; height: 350px;">
+   </div>
+   <div>
+   	<h2 style="text-align: center; color: #820024;">Artisan</h2>
+     <img class="img-main" src="cobs-product-sourdough-vienna-583x400.png" style="width: 450px; height: 350px;">
+   </div>
+   	<div>
+   	<h2 style="text-align: center; color: #820024;">Simple</h2>
+     <img class="img-main" src="cobs-product-whole-wheat-loaf-583x400.png" style="width: 450px; height: 350px;">
+   </div>
+   <div>
+   	<h2 style="text-align: center; color: #820024;">Sweet</h2>
+     <img class="img-main" src="cobs-product-cinnamon-bun-mini-6-pack-1-583x400.png" style="width: 450px; height: 350px;">
+   </div> 
+   </div>  
+<button id="btn3" class="btn btn-sm " onclick="viewProduct()" style="background-color:transparent; padding: 12px 25px; font-size: 25px; border-color: #820024; color: #820024; text-transform: uppercase; ">View Products</button>
+</div>
+</div> 
+
+
+<div class = "d1">
+	<div class="s1">
+	<div id="s2">	
+   	<h1 style="font-family: 'Luckiest Guy', cursive;"> Behind the Bread</h1>
+   	<p> Authenic sourdough doesn't come from an oven. It comes from the heart of our bakers</p>
+   </div>
+   </div>
+   <img id="img2" src="https://www.cobsbread.com/drive/uploads/2020/09/Sourdough_700x485-1-1-560x388.jpg">
+   	</div>
+  
+  <div class = "b1">
+	<div class="g1">
+	<div>	
+   	<h1 style="font-family: 'Luckiest Guy', cursive; color: #FFD700;"> No Funny Business</h1>
+   	<p style="color: white"> Quality ingredients and scratch baking techniques create that warm, buttery smell and happy feeling when you walk into a COBS Bread bakery. You’ll never have to worry about added preservatives in our bread. It’s as important to us as kneading dough or pre-heating the oven. From bun to crumb, this is as pure as it gets.</p>
+   </div>
+   </div>
+   <img id="img4" src="https://www.cobsbread.com/drive/uploads/2020/10/Brand_700x485-Cinn3-1.jpg">
+   	</div>
+<div class="navbar" style="display: flex; color: #820024;">
+	<div class="navv" style="padding-left: 65px;padding-bottom: 30px; width: 400px; ">
+		<h1 id="navi" style="padding-bottom: 40px;">WE BAKE EMAILS TOO. SIGN UP TO RECEIVE THE LATEST NEWS.</h1>
+	<form class="form-inline">
+    <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Email..." aria-label="Small" style="padding: 20px 35px;">
+    <button id="btn4" class="btn" type="submit" style="font-size: 25px;">></button>
+  </form>
+	</div>
+
+<div >
+	<div id="logo" style="font-family: 'Bad Script', cursive; text-transform: uppercase;padding-left: 670px;padding-top: 35px;padding-bottom: 30px;">bread</div>
+	<div class="sns" style="display:flex;justify-content: space-around; width: 200px; margin-left: 625px; cursor:pointer;">
+		<a href="https://www.instagram.com/"><img id="ins" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdLbbD4mpNCaJrgwTZMVrOW-6MjC5B6og4kA&usqp=CAU" width="30px" height="30px"></a>
+
+		<a href="https://twitter.com/?lang=en"><img id="twt" src="https://webstockreview.net/images/red-twitter-png-1.png" width="35px" height="35px" style="padding-top: -8px;"></a>
+
+		<a href="https://www.facebook.com/campaign/landing.php?campaign_id=1635645038&extra_1=s%7Cc%7C313664123240%7Ce%7Cfacebook%20%27%7C&placement=&creative=313664123240&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D1635645038%26adgroupid%3D61926920145%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-360705453827%26loc_physical_ms%3D1009806%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA5bz-BRD-ARIsABjT4niCgDFwU7uUC9UOFrHxwxTXNwfg06h_JSxARERNE-GzbQOZ5sY8oBYaAiGbEALw_wcB"><img id="fcb" src="https://www.shareicon.net/data/512x512/2016/11/24/856518_media_512x512.png" width="35px" height="35px"></a>
+
+		<a href="https://www.youtube.com/"><img id="ytb" src="https://icons-for-free.com/iconfiles/png/512/rs+social+youtube+icon-1320190674653481120.png" width="35px" height="35px" style="padding-top: -8px;"></a>
+	</div>
+</div>
+</div>
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  2500);
+function big(element){
+	element.style.borderBottom = "1px solid #820024";
+}
+function sml(element){
+	element.style.borderBottom = "1px solid white";
+}
+$(window).scroll(function(){
+    $('.d1').slideDown('slow');
+});
+     function viewProduct(){
+    location.href = "products.html";
+    }
+  
+</script>
+
+
+</body>
+</html>
